@@ -264,7 +264,7 @@ grep -r "console.log" src/ --include="*.ts" --include="*.tsx"
 | `dangerouslySetInnerHTML` usage | ⚠️ Found | Used in 2 files with hardcoded content only (safe) |
 | Console statements | ✅ Pass | No `console.log`, `console.debug`, or `console.warn` found |
 | Exposed sensitive files | ✅ Pass | `.env`, `.git/config`, `package.json` all return 404 |
-| Security headers | ✅ Fixed | X-Content-Type-Options, X-Frame-Options, X-XSS-Protection, HSTS added via vercel.json |
+| Security headers | ✅ Fixed | X-Content-Type-Options, X-Frame-Options, X-XSS-Protection, HSTS, Referrer-Policy, Permissions-Policy, CSP added via vercel.json |
 | External link security | ✅ Pass | All external links use `rel="noopener noreferrer"` |
 | Error boundaries | ✅ Fixed | React error boundary component added and wrapping App |
 | SRI for third-party scripts | ✅ Fixed | SRI hash added for Google Fonts in index.html |
