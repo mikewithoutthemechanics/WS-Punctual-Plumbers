@@ -33,8 +33,38 @@ export function WaterCalculator() {
     };
   }, [people, showersPerWeek, hasGarden]);
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Calculate Your Garden Route Water Savings",
+    "description": "Use our water savings calculator to estimate how much water and money you could save with efficient fixtures, leak repair, and smart irrigation.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Enter number of people",
+        "text": "Set the number of people in your home to estimate daily water usage."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Enter weekly showers",
+        "text": "Set the number of showers per week for the household."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Select garden irrigation",
+        "text": "Check if you have a garden or irrigation system to include outdoor water usage."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "View savings estimate",
+        "text": "See your estimated monthly water savings in litres, Rand, and CO₂ avoided."
+      }
+    ]
+  };
+
   return (
     <section id="calculator" className="py-20 sm:py-28" style={{ background: "#0F1729" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div className="mx-auto max-w-[1250px] px-5 sm:px-7">
         <div className="text-center max-w-[820px] mx-auto">
           <h3 className="text-[32px] sm:text-[44px] font-[800] mt-3 text-white">Water Savings Calculator</h3>

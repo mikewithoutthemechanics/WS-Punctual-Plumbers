@@ -267,6 +267,32 @@ export function BlogPostPage({ slug }: BlogPostPageProps) {
           </div>
         </div>
       </section>
+
+      {/* BlogPosting Schema for SEO */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "datePublished": post.date + " 01",
+        "dateModified": post.date + " 01",
+        "author": {
+          "@type": "Organization",
+          "name": "Punctual Plumbers"
+        },
+        "publisher": {
+          "@type": "LocalBusiness",
+          "name": "Punctual Plumbers",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://pp-edit1-overhaul.vercel.app/plumbers-logo.png"
+          }
+        },
+        "description": post.content.split('\n\n')[0].substring(0, 160),
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://pp-edit1-overhaul.vercel.app/#/blog/" + slug
+        }
+      }) }} />
     </div>
   );
 }
