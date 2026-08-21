@@ -351,7 +351,6 @@ function AppContent() {
       className="min-h-screen antialiased overflow-x-clip"
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&display=swap');
         h1,h2,h3,.display { font-family: 'Outfit', 'Inter', sans-serif; letter-spacing:-0.018em; }
         ::selection { background:#00d2ff33; color:#fff; }
         * { scrollbar-width: thin; scrollbar-color: #00D2FF33 #0b1b2b;}

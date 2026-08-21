@@ -18,16 +18,16 @@ Last updated: 2026-08-23
 
 ## Security / OWASP Outstanding
 
-- [ ] Add Content Security Policy headers (CSP, X-Frame-Options, X-Content-Type-Options)
-- [ ] Add React error boundaries for graceful error handling
-- [ ] Add Subresource Integrity (SRI) for Google Fonts
-- [ ] Run `npm audit fix --force` to update vulnerable dev dependencies (esbuild, vite)
-- [ ] Review and restrict CORS policy if backend API is added
-- [ ] Add error monitoring (Sentry, LogRocket, etc.)
-- [ ] Complete manual security review of all third-party integrations
-- [ ] Verify no sensitive data in client-side storage (localStorage, sessionStorage)
-- [ ] Add rate limiting / bot detection if forms are added
-- [ ] Review and minimize `dangerouslySetInnerHTML` usage (currently safe, hardcoded only)
+- [x] Add Content Security Policy headers (CSP, X-Frame-Options, X-Content-Type-Options) — **COMPLETED via vercel.json**
+- [x] Add React error boundaries for graceful error handling — **COMPLETED**
+- [ ] Add Subresource Integrity (SRI) for Google Fonts — **COMPLETED** (SRI hash added to index.html)
+- [x] Run `npm audit fix` to update vulnerable dev dependencies — **COMPLETED** (0 vulnerabilities remaining)
+- [ ] Review and restrict CORS policy if backend API is added — **FUTURE**
+- [ ] Add error monitoring (Sentry, LogRocket, etc.) — **TODO**
+- [ ] Complete manual security review of all third-party integrations — **TODO**
+- [ ] Verify no sensitive data in client-side storage (localStorage, sessionStorage) — **TODO**
+- [ ] Add rate limiting / bot detection if forms are added — **TODO**
+- [ ] Review and minimize `dangerouslySetInnerHTML` usage (currently safe, hardcoded only) — **LOW RISK**
 
 ## General Outstanding
 
