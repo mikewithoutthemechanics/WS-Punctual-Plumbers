@@ -253,9 +253,9 @@ function HomePage() {
 
           <div className="mt-10 relative rounded-[24px] overflow-hidden border border-white/[0.10] shadow-[0_30px_90px_rgba(0,0,0,0.48)]">
             <div className="relative h-[380px] sm:h-[520px] w-full">
-              <img src={gardenImages.bath2} alt="After" className="absolute inset-0 h-full w-full object-cover" />
+              <img src={gardenImages.bath2} alt="After: Knysna lagoon cottage full copper re-pipe and designer bath renovation by Punctual Plumbers" className="absolute inset-0 h-full w-full object-cover" />
               <div className="absolute inset-0" style={{ clipPath:`inset(0 ${100-beforeAfter}% 0 0)` }}>
-                <img src={gardenImages.bath3} alt="Before" className="h-full w-full object-cover saturate-[.65] brightness-[.82]" />
+                <img src={gardenImages.bath3} alt="Before: 1998 tile and galvanized pipes in Knysna lagoon cottage before renovation by Punctual Plumbers" className="h-full w-full object-cover saturate-[.65] brightness-[.82]" />
                 <div className="absolute inset-0 bg-[#06243a]/28" />
                 <div className="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-[#031827]/78 text-[11.5px] font-[700] text-white/90 border border-white/14">BEFORE – 1998 tile / galvanized</div>
               </div>
@@ -311,6 +311,21 @@ function AppContent() {
   const isPrivacy = hash === "#/privacy-policy";
   const isTerms = hash === "#/terms-of-service";
   const [mobileMenu, setMobileMenu] = useState(false);
+
+  // Dynamic SEO meta tags
+  if (typeof document !== "undefined") {
+    if (isBlogPost) {
+      document.title = "Garden Route Plumbing Journal | Punctual Plumbers";
+    } else if (isBlog) {
+      document.title = "Plumbing Journal | Punctual Plumbers";
+    } else if (isPrivacy) {
+      document.title = "Privacy Policy | Punctual Plumbers";
+    } else if (isTerms) {
+      document.title = "Terms of Service | Punctual Plumbers";
+    } else {
+      document.title = "Punctual Plumbers — Being Punctual is our business. Your Paradise Protected.";
+    }
+  }
 
   let pageContent;
   if (isBlogPost) {
@@ -457,6 +472,115 @@ function AppContent() {
           <div>Designed & developed by Agentcy.co.za | AI by Integr8 AI</div>
         </div>
       </footer>
+
+      {/* FAQ Section for SEO/AEO */}
+      <section className="py-20 sm:py-28" style={{ background: colors.charcoal2 }}>
+        <div className="mx-auto max-w-[900px] px-5 sm:px-7">
+          <div className="text-center max-w-[720px] mx-auto">
+            <h2 className="text-[34px] sm:text-[48px] font-[800] mt-3 text-white">Frequently asked questions.</h2>
+            <p className="text-white/68 mt-3 text-[15.7px]">Quick answers to common Garden Route plumbing questions.</p>
+          </div>
+
+          <div className="mt-12 space-y-4">
+            {[
+              {
+                q: "How quickly can you respond to an emergency in Knysna?",
+                a: "Our average emergency response time is 21-31 minutes across the Garden Route corridor. For Knysna, Sedgefield, and Plettenberg Bay, we typically arrive within 30 minutes during business hours and within 60 minutes after hours."
+              },
+              {
+                q: "Do you service areas outside of Knysna and Plett?",
+                a: "Yes. We cover the full Garden Route from Mossel Bay to Storms River, including Hartenbos, George, Knysna, Sedgefield, Wilderness, and Plettenberg Bay."
+              },
+              {
+                q: "Are you licensed and insured?",
+                a: "Yes. Punctual Plumbers is PIRB registered (3419) and fully insured. We are also IOPSA members and comply with SANS 10252 standards. All work carries a 7-year workmanship guarantee."
+              },
+              {
+                q: "What payment methods do you accept?",
+                a: "We accept EFT, cash, and card payments. All prices are in South African Rand (ZAR) and include VAT where applicable. Emergency callout payment is due within 7 days of invoice."
+              },
+              {
+                q: "Do you offer free quotes?",
+                a: "Yes. We provide free on-site assessments and written quotes for all jobs. Emergency callouts include a no-obligation quote before any work begins. Quotes are valid for 30 days."
+              },
+              {
+                q: "Why is copper better than PVC for coastal homes?",
+                a: "Copper lasts 50+ years in salt-air environments. PVC degrades 4x faster due to UV exposure and salt crystallization. For homes within 800m of the sea, we always recommend coastal-grade copper for longevity and corrosion resistance."
+              },
+              {
+                q: "Can you help with load-shedding geyser timers?",
+                a: "Yes. We install and program geyser timers as part of our energy efficiency service. A properly configured timer can reduce geyser electricity costs by 30-40% without sacrificing hot water availability."
+              },
+              {
+                q: "What is your 7-year guarantee?",
+                a: "Our 7-year workmanship guarantee is the longest on the Garden Route. It covers defects in our workmanship only, not damage from misuse, negligence, or external factors. Manufacturer warranties apply to all materials we supply."
+              },
+            ].map((item, i) => (
+              <div key={i} className="rounded-[20px] p-6 sm:p-8" style={{ background: "linear-gradient(170deg, rgba(23,48,76,0.9), rgba(8,24,44,0.9))", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <h3 className="text-[18px] sm:text-[20px] font-[700] text-white">{item.q}</h3>
+                <p className="mt-3 text-[14.5px] leading-relaxed text-white/75">{item.a}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-white/60">Still have questions?</p>
+            <a href="https://wa.me/27832379132?text=Hi%20Punctual%20Plumbers%20-%20I%20have%20a%20question%20about%20" target="_blank" rel="noreferrer"
+              className="mt-4 inline-flex items-center gap-2 px-[26px] py-[15px] rounded-[16px] text-[14.5px] font-[650] text-white transition-all"
+              style={{ background: "linear-gradient(135deg, #25D366, #128C7E)", border: "1px solid rgba(255,255,255,0.1)" }}>
+              Ask us on WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Schema for AEO */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How quickly can you respond to an emergency in Knysna?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our average emergency response time is 21-31 minutes across the Garden Route corridor. For Knysna, Sedgefield, and Plettenberg Bay, we typically arrive within 30 minutes during business hours and within 60 minutes after hours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are you licensed and insured?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Punctual Plumbers is PIRB registered (3419) and fully insured. We are also IOPSA members and comply with SANS 10252 standards. All work carries a 7-year workmanship guarantee."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is copper better than PVC for coastal homes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Copper lasts 50+ years in salt-air environments. PVC degrades 4x faster due to UV exposure and salt crystallization. For homes within 800m of the sea, we always recommend coastal-grade copper."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer free quotes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We provide free on-site assessments and written quotes for all jobs. Emergency callouts include a no-obligation quote before any work begins. Quotes are valid for 30 days."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What areas do you service?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We cover the full Garden Route from Mossel Bay to Storms River, including Hartenbos, George, Knysna, Sedgefield, Wilderness, and Plettenberg Bay."
+            }
+          }
+        ]
+      }) }} />
 
       {/* WhatsApp floating button */}
       <div className="fixed bottom-4 left-3 sm:left-5 z-[70]">

@@ -32,7 +32,7 @@ export function CoverageMap() {
           <div className="relative rounded-[26px] overflow-hidden border border-white/[0.096]"
             style={{ background: "#0B1120" }}>
             <div className="relative h-[420px] sm:h-[500px] overflow-hidden">
-              <img src={gardenImages.valley} alt="Garden Route" className="absolute inset-0 w-full h-full object-cover opacity-[0.18]" />
+              <img src={gardenImages.valley} alt="Garden Route coastal landscape from Mossel Bay to Storms River serviced by Punctual Plumbers" className="absolute inset-0 w-full h-full object-cover opacity-[0.18]" />
               <div className="absolute inset-0"
                 style={{ background: "radial-gradient(800px 360px at 60% 48%, rgba(0,210,255,0.086), transparent 70%), linear-gradient(180deg, rgba(7,23,42,0.42), rgba(6,15,28,0.78))" }} />
               {/* coastline line */}
