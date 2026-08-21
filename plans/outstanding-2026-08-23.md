@@ -18,21 +18,16 @@ Last updated: 2026-08-23
 
 ## Security / OWASP Outstanding
 
-- [ ] Complete OWASP Top 10 security testing checklist
-- [ ] Run dependency audit: `npm audit`
-- [ ] Review and fix any `high`/`critical` vulnerabilities
-- [ ] Verify Content Security Policy headers
-- [ ] Verify HTTPS enforcement in production
-- [ ] Review input validation on all user-facing inputs
-- [ ] Review authentication/authorization (if applicable)
-- [ ] Review sensitive data exposure risks
-- [ ] Review XML external entity (XXE) prevention
-- [ ] Review broken access control vectors
-- [ ] Review security misconfiguration risks
-- [ ] Review cross-site scripting (XSS) prevention
-- [ ] Review insecure deserialization risks
-- [ ] Review using components with known vulnerabilities
-- [ ] Review insufficient logging and monitoring
+- [ ] Add Content Security Policy headers (CSP, X-Frame-Options, X-Content-Type-Options)
+- [ ] Add React error boundaries for graceful error handling
+- [ ] Add Subresource Integrity (SRI) for Google Fonts
+- [ ] Run `npm audit fix --force` to update vulnerable dev dependencies (esbuild, vite)
+- [ ] Review and restrict CORS policy if backend API is added
+- [ ] Add error monitoring (Sentry, LogRocket, etc.)
+- [ ] Complete manual security review of all third-party integrations
+- [ ] Verify no sensitive data in client-side storage (localStorage, sessionStorage)
+- [ ] Add rate limiting / bot detection if forms are added
+- [ ] Review and minimize `dangerouslySetInnerHTML` usage (currently safe, hardcoded only)
 
 ## General Outstanding
 
