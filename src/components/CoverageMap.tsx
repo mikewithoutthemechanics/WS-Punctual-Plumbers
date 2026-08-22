@@ -21,7 +21,6 @@ export function CoverageMap() {
 
   return (
     <section id="coverage" className="relative py-20 sm:py-28 overflow-hidden" style={{ background: "linear-gradient(180deg, var(--bg-section) 0%, var(--bg) 100%)" }}>
-      <div className="noise-overlay" />
       <div className="mx-auto max-w-[1250px] px-5 sm:px-7">
         <div className="max-w-[780px]">
           <h3 className="text-[32px] sm:text-[44px] font-[800] mt-3 text-white">

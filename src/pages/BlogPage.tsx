@@ -60,7 +60,6 @@ export function BlogPage() {
         <div className="absolute inset-0" style={{
           background: "linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%)"
         }} />
-        <div className="noise-overlay" />
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: "linear-gradient(rgba(0,210,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,210,255,0.03) 1px, transparent 1px)",
           backgroundSize: "50px 50px",
@@ -140,7 +139,6 @@ export function BlogPage() {
 
       {/* Footer CTA */}
       <section className="relative py-16 border-t border-white/[0.05] overflow-hidden" style={{ background: "linear-gradient(180deg, var(--bg-section) 0%, var(--bg-deep) 100%)" }}>
-        <div className="noise-overlay" />
         <div className="mx-auto max-w-[1250px] px-5 sm:px-7 text-center">
           <h3 className="text-[28px] sm:text-[36px] font-[800] text-white">Need plumbing advice for your property?</h3>
           <p className="mt-3 text-white/60 max-w-[600px] mx-auto">Our team knows every pipe, pressure zone, and council requirement from Mossel Bay to Storms River.</p>

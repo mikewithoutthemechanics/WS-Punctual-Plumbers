@@ -64,7 +64,6 @@ export function WaterCalculator() {
 
   return (
     <section id="calculator" className="relative py-20 sm:py-28 overflow-hidden" style={{ background: "linear-gradient(180deg, var(--bg-alt) 0%, var(--bg-section) 100%)" }}>
-      <div className="noise-overlay" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div className="mx-auto max-w-[1250px] px-5 sm:px-7">
         <div className="text-center max-w-[820px] mx-auto">

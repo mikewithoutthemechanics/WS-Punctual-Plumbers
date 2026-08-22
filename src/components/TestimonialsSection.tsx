@@ -27,7 +27,6 @@ export function TestimonialsSection() {
 
   return (
     <section id="reviews" className="relative py-20 sm:py-28 overflow-hidden" style={{ background: "var(--bg-deep)", color: "#f6f6f6" }}>
-      <div className="noise-overlay" />
       <div className="mx-auto max-w-[1250px] px-5 sm:px-7">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <div>

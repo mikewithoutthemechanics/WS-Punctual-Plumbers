@@ -27,7 +27,6 @@ export function KnowledgeCarousel() {
         backgroundSize: "50px 50px",
         pointerEvents: "none"
       }} />
-      <div className="noise-overlay" />
       <div className="mx-auto max-w-[1250px] px-5 sm:px-7">
         <div className="max-w-[720px] text-center">
           <h2 className="text-[34px] sm:text-[48px] font-[800] mt-3 text-white">Water wisdom from the Route.</h2>

@@ -208,7 +208,6 @@ export function BlogPostPage({ slug }: BlogPostPageProps) {
     <div className="relative min-h-screen" style={{ background: "var(--bg)", color: "#f6f6f6" }}>
       <section className="relative py-16 sm:py-24 overflow-hidden">
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%)" }} />
-        <div className="noise-overlay" />
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: "linear-gradient(rgba(0,210,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,210,255,0.03) 1px, transparent 1px)",
           backgroundSize: "50px 50px",
