@@ -5,7 +5,7 @@ const blogPosts = [
   {
     slug: "knysna-pipe-freeze-protection",
     tag: "WINTER",
-    title: "Knysna pipe freeze protection — 7 low-cost checks",
+    title: "Knysna pipe freeze protection - 7 low-cost checks",
     excerpt: "Winter temperatures in Knysna can drop below 5°C. Unprotected copper and PVC pipes in roof spaces, garages, and exterior walls are at risk. Here's how to prevent burst pipes before they happen.",
     readTime: "5 min read",
     date: "June 2025",
@@ -14,14 +14,14 @@ const blogPosts = [
     slug: "loadshedding-geyser-timers",
     tag: "SUMMER",
     title: "Load-shedding geyser timers that actually save",
-    excerpt: "Your geyser is likely your home's biggest electricity user. With the right timer strategy, you can cut geyser costs by 30-40% without sacrificing hot water — even during Stage 6.",
+    excerpt: "Your geyser is likely your home's biggest electricity user. With the right timer strategy, you can cut geyser costs by 30-40% without sacrificing hot water, even during Stage 6.",
     readTime: "6 min read",
     date: "January 2025",
   },
   {
     slug: "why-plett-homes-need-copper",
     tag: "COASTAL",
-    title: "Why Plett homes need copper — not PVC — within 800m of sea",
+    title: "Why Plett homes need copper - not PVC - within 800m of sea",
     excerpt: "Salt-laden air corrodes PVC fittings 4x faster than inland. Copper's natural antimicrobial properties and 50+ year lifespan make it the only sensible choice for coastal Garden Route homes.",
     readTime: "7 min read",
     date: "March 2025",
@@ -30,7 +30,7 @@ const blogPosts = [
     slug: "garden-route-water-quality-report",
     tag: "WATER QUALITY",
     title: "Garden Route water quality report 2025: What's in your tap?",
-    excerpt: "We tested municipal, borehole, and tank water across 12 towns from Mossel Bay to Storms River. Results show elevated iron, hardness, and in some areas — bacterial contamination.",
+    excerpt: "We tested municipal, borehole, and tank water across 12 towns from Mossel Bay to Storms River. Results show elevated iron, hardness, and in some areas, bacterial contamination.",
     readTime: "8 min read",
     date: "April 2025",
   },
@@ -38,7 +38,7 @@ const blogPosts = [
     slug: "forest-root-intrusion-drainage",
     tag: "DRAINAGE",
     title: "Forest root intrusion: The silent destroyer of Plett drainage",
-    excerpt: "70% of Plett properties have root intrusion in main drainage lines. Camera inspection catches it early — before the backup floods your home.",
+    excerpt: "70% of Plett properties have root intrusion in main drainage lines. Camera inspection catches it early, before the backup floods your home.",
     readTime: "5 min read",
     date: "February 2025",
   },
@@ -58,7 +58,7 @@ export function BlogPage() {
       {/* Hero */}
       <section className="relative py-20 sm:py-28 overflow-hidden">
         <div className="absolute inset-0" style={{
-          background: "linear-gradient(180deg, #0B1120 0%, #0F1729 100%)"
+          background: "linear-gradient(180deg, #0B1120 0%, #0B1120 100%)"
         }} />
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: "linear-gradient(rgba(0,210,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,210,255,0.03) 1px, transparent 1px)",
@@ -77,7 +77,7 @@ export function BlogPage() {
               Garden Route Plumbing Journal
             </h1>
             <p className="mt-4 text-[16px] sm:text-[18px] text-white/60 max-w-[600px] mx-auto">
-              Expert insights on coastal plumbing, water conservation, and protecting your Garden Route property. Written by the GRP team — PIRB 3419.
+              Expert insights on coastal plumbing, water conservation, and protecting your Garden Route property. Written by the GRP team, PIRB 3419.
             </p>
           </motion.div>
         </div>
@@ -138,7 +138,7 @@ export function BlogPage() {
       </section>
 
       {/* Footer CTA */}
-      <section className="py-16 border-t border-white/[0.05]" style={{ background: "#0F1729" }}>
+      <section className="py-16 border-t border-white/[0.05]" style={{ background: "#0B1120" }}>
         <div className="mx-auto max-w-[1250px] px-5 sm:px-7 text-center">
           <h3 className="text-[28px] sm:text-[36px] font-[800] text-white">Need plumbing advice for your property?</h3>
           <p className="mt-3 text-white/60 max-w-[600px] mx-auto">Our team knows every pipe, pressure zone, and council requirement from Mossel Bay to Storms River.</p>

@@ -8,7 +8,7 @@ interface BlogPostPageProps {
 
 const blogPosts: Record<string, { title: string; tag: string; date: string; readTime: string; content: string }> = {
   "knysna-pipe-freeze-protection": {
-    title: "Knysna pipe freeze protection — 7 low-cost checks",
+    title: "Knysna pipe freeze protection - 7 low-cost checks",
     tag: "WINTER",
     date: "June 2025",
     readTime: "5 min read",
@@ -42,7 +42,7 @@ Need a winter readiness check? Contact Punctual Plumbers for a free pipe insulat
     tag: "SUMMER",
     date: "January 2025",
     readTime: "6 min read",
-    content: `Your geyser is likely your home's biggest electricity consumer — accounting for 40-60% of your monthly bill. During load-shedding, the cycle of cooling and reheating is brutal on both your wallet and your geyser's lifespan.
+    content: `Your geyser is likely your home's biggest electricity consumer, accounting for 40-60% of your monthly bill. During load-shedding, the cycle of cooling and reheating is brutal on both your wallet and your geyser's lifespan.
 
 ## The timer strategy that works
 
@@ -63,7 +63,7 @@ Set your geyser to 55-60°C. Higher settings waste energy and increase scaling. 
 Punctual Plumbers installs and programs geyser timers as part of our energy efficiency service. Call us for a free quote.`
   },
   "why-plett-homes-need-copper": {
-    title: "Why Plett homes need copper — not PVC — within 800m of sea",
+    title: "Why Plett homes need copper - not PVC - within 800m of sea",
     tag: "COASTAL",
     date: "March 2025",
     readTime: "7 min read",
@@ -136,13 +136,13 @@ Roots are drawn to moisture and nutrients. Even tiny cracks in PVC or older clay
 
 ## Camera inspection: the only reliable diagnosis
 
-We use CCTV camera inspection to map every root intrusion, crack, and blockage. This shows exactly what's happening and where — no guesswork.
+We use CCTV camera inspection to map every root intrusion, crack, and blockage. This shows exactly what's happening and where. No guesswork.
 
 ## Solutions
 
 - **Jetting**: High-pressure water jetting clears roots and restores flow (temporary fix)
 - **RootX**: Biodegradable foam that kills roots without harming trees
-- **Pipe relining**: Install a new liner inside the old pipe — no excavation needed
+- **Pipe relining**: Install a new liner inside the old pipe. No excavation needed
 - **Excavation and replacement**: The permanent fix for severely damaged pipes
 
 Book a camera inspection today and stop guessing about your drainage.`
@@ -207,7 +207,7 @@ export function BlogPostPage({ slug }: BlogPostPageProps) {
   return (
     <div className="min-h-screen" style={{ background: "#0B1120", color: "#f6f6f6" }}>
       <section className="relative py-16 sm:py-24 overflow-hidden">
-        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, #0B1120 0%, #0F1729 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, #0B1120 0%, #0B1120 100%)" }} />
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: "linear-gradient(rgba(0,210,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,210,255,0.03) 1px, transparent 1px)",
           backgroundSize: "50px 50px",

@@ -8,7 +8,7 @@ export function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen" style={{ background: "#0B1120", color: "#f6f6f6" }}>
       <section className="relative py-16 sm:py-24 overflow-hidden">
-        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, #0B1120 0%, #0F1729 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, #0B1120 0%, #0B1120 100%)" }} />
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(0,210,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,210,255,0.03) 1px, transparent 1px)", backgroundSize: "50px 50px" }} />
         <div className="relative mx-auto max-w-[900px] px-5 sm:px-7">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>

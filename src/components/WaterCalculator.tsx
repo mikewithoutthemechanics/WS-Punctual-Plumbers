@@ -63,12 +63,12 @@ export function WaterCalculator() {
   };
 
   return (
-    <section id="calculator" className="py-20 sm:py-28" style={{ background: "#0F1729" }}>
+    <section id="calculator" className="py-20 sm:py-28" style={{ background: "#0B1120" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div className="mx-auto max-w-[1250px] px-5 sm:px-7">
         <div className="text-center max-w-[820px] mx-auto">
           <h3 className="text-[32px] sm:text-[44px] font-[800] mt-3 text-white">Water Savings Calculator</h3>
-          <p className="text-white/68 mt-3 text-[15.7px]">See how much Garden Route water — and money — you could save.</p>
+          <p className="text-white/68 mt-3 text-[15.7px]">See how much Garden Route water and money you could save.</p>
         </div>
 
         <div className="mt-12 flex justify-center">

@@ -4,8 +4,8 @@ import { Icons } from "./Icons";
 
 const carouselFacts = [
   { icon: <Icons.WaterDrop />, fact: "Copper pipes last 50+ years in coastal homes. PVC degrades 4x faster in salt air.", tag: "MATERIALS" },
-  { icon: <Icons.DropletSearch />, fact: "A dripping tap wastes 11,000+ litres per year — enough to fill a Knysna pool.", tag: "WASTE" },
-  { icon: <Icons.DropletSearch />, fact: "Thermal leak detection finds 94% of slab leaks within 15 minutes — no demolition needed.", tag: "TECH" },
+  { icon: <Icons.DropletSearch />, fact: "A dripping tap wastes 11,000+ litres per year, enough to fill a Knysna pool.", tag: "WASTE" },
+  { icon: <Icons.DropletSearch />, fact: "Thermal leak detection finds 94% of slab leaks within 15 minutes. No demolition needed.", tag: "TECH" },
   { icon: <Icons.Wind />, fact: "70% of Plett homes have undetected forest root intrusions in drainage. Camera inspect.", tag: "ROOTS" },
   { icon: <Icons.Shield />, fact: "Our 7-year workmanship guarantee is the longest on the Garden Route. We stand by it.", tag: "GUARANTEE" },
 ];
@@ -21,7 +21,7 @@ export function KnowledgeCarousel() {
   const current = carouselFacts[idx];
 
   return (
-    <section className="relative py-20 sm:py-28 overflow-hidden" style={{ background: "linear-gradient(180deg, #0B1120 0%, #0F1729 100%)" }}>
+    <section className="relative py-20 sm:py-28 overflow-hidden" style={{ background: "linear-gradient(180deg, #0B1120 0%, #0B1120 100%)" }}>
       <div className="absolute inset-0 opacity-[0.04]" style={{
         backgroundImage: "linear-gradient(rgba(0,210,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,210,255,0.03) 1px, transparent 1px)",
         backgroundSize: "50px 50px",

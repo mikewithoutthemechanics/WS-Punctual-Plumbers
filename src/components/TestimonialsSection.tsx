@@ -12,7 +12,7 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   { name: "Liezl van Rooyen", area: "Knysna Heads", text: "We redid our entire water system with GRP. Copper detailing is museum-level. Their respect for our lagoon home was incredible.", stars: 5, avatar: "LV" },
-  { name: "André & Sanet Botha", area: "Wilderness Beach", text: "Burst main at 3:12am in a storm. They were at the door 27 minutes later. Paradise Protected is not marketing — it's real.", stars: 5, avatar: "AB" },
+  { name: "André & Sanet Botha", area: "Wilderness Beach", text: "Burst main at 3:12am in a storm. They were at the door 27 minutes later. Paradise Protected is not marketing. It's real.", stars: 5, avatar: "AB" },
   { name: "Michael Chen", area: "Plettenberg Bay", text: "Whole-house filtration + copper re-pipe. Water bill -64%, pressure perfect. They even sent Garden Route water quality reports.", stars: 5, avatar: "MC" },
   { name: "Nandi Mbeki", area: "George", text: "Three plumbers failed to find the slab leak. GRP found it in 14 minutes with thermal. Saved our oak floors.", stars: 5, avatar: "NM" },
 ];
@@ -26,7 +26,7 @@ export function TestimonialsSection() {
   }, []);
 
   return (
-    <section id="reviews" className="py-20 sm:py-28" style={{ background: "#0F1729", color: "#f6f6f6" }}>
+    <section id="reviews" className="py-20 sm:py-28" style={{ background: "#0B1120", color: "#f6f6f6" }}>
       <div className="mx-auto max-w-[1250px] px-5 sm:px-7">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <div>
@@ -56,7 +56,7 @@ export function TestimonialsSection() {
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.45 }}
               >
-                <div className="mt-4 text-[15px] leading-relaxed" style={{ fontFamily: "'Playfair Display', serif", fontSize: "20px", lineHeight: "1.55", color: "#e8f4f8" }}>
+                <div className="mt-4 text-[15px] leading-relaxed" style={{ fontFamily: "'Outfit', sans-serif", fontSize: "20px", lineHeight: "1.55", color: "#e8f4f8" }}>
                   "{testimonials[tIdx].text}"
                 </div>
                 <div className="mt-6 flex items-center gap-3">
@@ -95,7 +95,7 @@ export function TestimonialsSection() {
               { icon: <Icons.Shield />, t: "PIRB 3419 • IOPSA Member", s: "Full insurance, COC traceable" },
               { icon: <Icons.Certificate />, t: "Coastal Copper Certified", s: "Salt-air, forest root, lagoon rated" },
             ].map((b) => (
-              <div key={b.t} className="rounded-[18px] p-5 shadow-[0_8px_32px_rgba(0,0,0,0.3)]"
+              <div key={b.t} className="rounded-[16px] p-5 shadow-[0_8px_32px_rgba(0,0,0,0.3)]"
                 style={{ background: "linear-gradient(170deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01))", border: "1px solid rgba(255,255,255,0.08)" }}>
                 <div className="text-aqua" style={{ fontSize: "24px" }}>
                   {b.icon}

@@ -20,11 +20,11 @@ export function CoverageMap() {
   const [mapActive, setMapActive] = useState(serviceTowns[0]);
 
   return (
-    <section id="coverage" className="py-20 sm:py-28" style={{ background: "#0F1729" }}>
+    <section id="coverage" className="py-20 sm:py-28" style={{ background: "#0B1120" }}>
       <div className="mx-auto max-w-[1250px] px-5 sm:px-7">
         <div className="max-w-[780px]">
           <h3 className="text-[32px] sm:text-[44px] font-[800] mt-3 text-white">
-            Wherever you are on the Garden Route — we're already nearby.
+            Wherever you are on the Garden Route, we're already nearby.
           </h3>
         </div>
 

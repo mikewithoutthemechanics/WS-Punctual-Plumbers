@@ -15,13 +15,12 @@ import { Icons } from "./components/Icons";
 const colors = {
   ocean: "#0A3D62",
   oceanDeep: "#072641",
-  green: "#1E8449",
-  copper: "#CD7F32",
   aqua: "#00D2FF",
   aquaSoft: "#55e6fb",
   sand: "#F5F0E8",
-  charcoal: "#0F1729",
-  charcoal2: "#0A1220",
+  bg: "#0B1120",
+  bgAlt: "#0B1120",
+  surface: "#0d1828",
   slate: "#23364b",
 };
 
@@ -30,13 +29,13 @@ const WATER_TAP = "https://videos.pexels.com/video-files/29251309/12621376_1920_
 
 const services = [
   { id:"plumbing", icon:"Wrench", title:"General Plumbing", desc:"Full residential & commercial systems. Precision joints, pressure balance, forever-fit finishes.", color:"#00D2FF"},
-  { id:"bath", icon:"ShowerHead", title:"Bathroom Renovations", desc:"Bathroom remodels, sauna installations, leak free guarentee.", color:"#22c55e"},
-  { id:"leak", icon:"DropletSearch", title:"Leak Detection", desc:"Fast and accurate leak detection. Quick repair, satisfation guarantee.", color:"#00D2FF"},
-  { id:"install", icon:"Building", title:"New Installations", desc:"Coastal-grade copper & PEX. Salt air rated fittings for homes from Hartenbos to Plett.", color:"#CD7F32"},
-  { id:"geyser", icon:"Flame", title:"Geyser Repairs", desc:"Burst geyser, we're here for you. Full replacements and repairs.", color:"#f59e0b"},
-  { id:"drain", icon:"Wind", title:"Drain Cleaning", desc:"High-pressure jetting. Roots from forest properties cleared – camera verified.", color:"#1E8449"},
-  { id:"filter", icon:"Filter", title:"Water Filtration", desc:"Tank, borehole & municipal. Garden Route water – pure, mineral balanced.", color:"#00D2FF"},
-  { id:"emerg", icon:"AlertTriangle", title:"Emergency Callouts", desc:"True 24/7. Average 38min response inside route corridor. Live GPS dispatch.", color:"#ff4d6d"},
+  { id:"bath", icon:"ShowerHead", title:"Bathroom Renovations", desc:"Bathroom remodels, sauna installations, leak free guarantee.", color:"#00D2FF"},
+  { id:"leak", icon:"DropletSearch", title:"Leak Detection", desc:"Fast and accurate leak detection. Quick repair, satisfaction guarantee.", color:"#00D2FF"},
+  { id:"install", icon:"Building", title:"New Installations", desc:"Coastal-grade copper & PEX. Salt air rated fittings for homes from Hartenbos to Plett.", color:"#00D2FF"},
+  { id:"geyser", icon:"Flame", title:"Geyser Repairs", desc:"Burst geyser, we're here for you. Full replacements and repairs.", color:"#00D2FF"},
+  { id:"drain", icon:"Wind", title:"Drain Cleaning", desc:"High-pressure jetting. Roots from forest properties cleared - camera verified.", color:"#00D2FF"},
+  { id:"filter", icon:"Filter", title:"Water Filtration", desc:"Tank, borehole & municipal. Garden Route water - pure, mineral balanced.", color:"#00D2FF"},
+  { id:"emerg", icon:"AlertTriangle", title:"Emergency Callouts", desc:"True 24/7. Average 38min response inside route corridor. Live GPS dispatch.", color:"#00D2FF"},
 ];
 
 function ServiceIcon({ name, className }: { name: string; className?: string }) {
@@ -108,16 +107,13 @@ function HomePage() {
                  className="inline-flex px-[26px] py-[15px] rounded-[16px] glass text-[14.5px] font-[650] text-white">
                 <Icons.MessageCircle className="mr-2" /> WhatsApp 24/7
               </a>
-              <div className="mt-4 text-[12.2px] text-white/56">
-                Trusted across the Garden Route — from Mossel Bay to Storms River — since 2009
-              </div>
             </div>
 
             <motion.div
               initial={{ opacity:0, y:30, scale:0.985 }}
               animate={{ opacity:1, y:0, scale:1 }}
               transition={{ delay:0.55, duration:0.9, ease:[0.22,1,0.36,1] }}
-              className="relative rounded-[26px] overflow-hidden mx-auto mt-16 max-w-[430px] z-[9999]"
+               className="relative rounded-[16px] overflow-hidden mx-auto mt-16 max-w-[430px] z-[9999]"
               style={{
                 background:"linear-gradient(180deg, rgba(13,27,44,0.78), rgba(9,19,32,0.87))",
                 border:"1px solid rgba(255,255,255,0.095)",
@@ -140,7 +136,7 @@ function HomePage() {
                     </div>
                   ))}
                 </div>
-                <div className="mt-4 rounded-[14px] overflow-hidden border border-white/[0.08]">
+                 <div className="mt-4 rounded-[16px] overflow-hidden border border-white/[0.08]">
                   <video src={WATER_TAP} autoPlay loop muted playsInline className="w-full h-[108px] object-cover opacity-90" />
                 </div>
                 <div className="mt-[14px] text-[11.8px] leading-relaxed text-white/76">
@@ -165,8 +161,8 @@ function HomePage() {
       {/* Trust ribbon */}
       <section className="relative z-20 mt-32 pb-6">
         <div className="mx-auto max-w-[1250px] px-5 sm:px-7">
-          <div className="rounded-[20px] px-4 sm:px-7 py-[16px] flex flex-wrap items-center justify-center sm:justify-between gap-4 text-[12.3px] sm:text-[13px]"
-            style={{ background:"#101629", border:"1px solid rgba(255,255,255,0.073)", boxShadow:"0 20px 60px rgba(0,0,0,0.42)" }}>
+          <div className="rounded-[16px] px-4 sm:px-7 py-[16px] flex flex-wrap items-center justify-center sm:justify-between gap-4 text-[12.3px] sm:text-[13px]"
+            style={{ background:"#0B1120", border:"1px solid rgba(255,255,255,0.073)", boxShadow:"0 20px 60px rgba(0,0,0,0.42)" }}>
             {[
               <span key="rating" className="flex items-center gap-1"><Icons.Star className="text-aqua w-4 h-4" /> 4.9/5 Google Rating</span>,
               <span key="award" className="flex items-center gap-1"><Icons.Award className="text-aqua w-4 h-4" /> Garden Route's #1 Rated Plumber</span>,
@@ -183,7 +179,7 @@ function HomePage() {
         <div className="absolute inset-0 opacity-[0.12]"
              style={{ backgroundImage:`url(${gardenImages.heads})`, backgroundSize:"cover", backgroundPosition:"center", backgroundAttachment:"fixed" }} />
         <div className="absolute inset-0"
-             style={{ background:`linear-gradient(180deg, ${colors.charcoal} 0%, rgba(26,26,46,0.92) 16%, rgba(11,32,52,0.58) 50%, rgba(26,26,46,0.97) 100%)`}}/>
+              style={{ background:`linear-gradient(180deg, ${colors.bg} 0%, rgba(26,26,46,0.92) 16%, rgba(11,32,52,0.58) 50%, rgba(26,26,46,0.97) 100%)`}}/>
         <div className="relative mx-auto max-w-[1250px] px-5 sm:px-7">
           <motion.div
             initial={{ opacity:0, y:32 }}
@@ -200,7 +196,7 @@ function HomePage() {
       </section>
 
       {/* Scene 2 – Services */}
-      <section className="relative py-14 sm:py-20" style={{ background:`linear-gradient(180deg, ${colors.charcoal} 0%, ${colors.charcoal2} 100%)` }}>
+      <section className="relative py-14 sm:py-20" style={{ background:`linear-gradient(180deg, ${colors.bg} 0%, ${colors.bgAlt} 100%)` }}>
         <div className="mx-auto max-w-[1250px] px-5 sm:px-7">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-6">
             <div>
@@ -218,7 +214,7 @@ function HomePage() {
                 transition={{ delay: idx*0.045, duration:0.55 }}
                 onMouseEnter={()=>setActiveService(s.id)}
                 onMouseLeave={()=>setActiveService(null)}
-                className="group relative rounded-[24px] p-[20px] sm:p-[24px] cursor-pointer overflow-hidden"
+                className="group relative rounded-[16px] p-[20px] sm:p-[24px] cursor-pointer overflow-hidden"
                 style={{
                   background: activeService===s.id
                     ? "linear-gradient(170deg, rgba(23,48,76,0.98), rgba(8,24,44,0.98))"
@@ -244,37 +240,38 @@ function HomePage() {
       <KnowledgeCarousel />
 
       {/* Before / After */}
-      <section className="py-20 sm:py-24" style={{ background: colors.charcoal }}>
+      <section className="py-20 sm:py-24" style={{ background: colors.bg }}>
         <div className="mx-auto max-w-[1100px] px-5 sm:px-7">
           <div className="text-center max-w-[750px] mx-auto">
             <h3 className="display text-[32px] sm:text-[44px] font-[800] mt-3">Drag the water line.</h3>
             <p className="text-white/68 mt-3 text-[15.5px]">Knysna lagoon cottage – full copper re-pipe + designer bath. 11 days, zero dust in living areas.</p>
           </div>
 
-          <div className="mt-10 relative rounded-[24px] overflow-hidden border border-white/[0.10] shadow-[0_30px_90px_rgba(0,0,0,0.48)]">
-            <div className="relative h-[380px] sm:h-[520px] w-full">
-              <img src={gardenImages.bath2} alt="After: Knysna lagoon cottage full copper re-pipe and designer bath renovation by Punctual Plumbers" className="absolute inset-0 h-full w-full object-cover" />
-              <div className="absolute inset-0" style={{ clipPath:`inset(0 ${100-beforeAfter}% 0 0)` }}>
-                <img src={gardenImages.bath3} alt="Before: 1998 tile and galvanized pipes in Knysna lagoon cottage before renovation by Punctual Plumbers" className="h-full w-full object-cover saturate-[.65] brightness-[.82]" />
-                <div className="absolute inset-0 bg-[#06243a]/28" />
-                <div className="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-[#031827]/78 text-[11.5px] font-[700] text-white/90 border border-white/14">BEFORE – 1998 tile / galvanized</div>
-              </div>
-              <div className="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-[#00d2ff]/95 text-[11.5px] font-[750] text-[#04212d]">AFTER – Coastal copper / travertine</div>
-
-              <div className="absolute top-0 bottom-0" style={{ left:`${beforeAfter}%` }}>
-                <div className="absolute top-0 bottom-0 w-[2.5px] -translate-x-1/2" style={{ background: colors.aqua, boxShadow:`0 0 28px ${colors.aqua}` }} />
-                <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-[48px] h-[48px] rounded-full flex items-center justify-center"
-                     style={{ background: `linear-gradient(135deg, ${colors.aqua}, #73f3ff)`, boxShadow:"0 8px 30px rgba(0,210,255,.45)" }}>
-                  <span className="text-[#062636] text-[15px] font-[900]">⇆</span>
-                </div>
-              </div>
-              <input
-                type="range" min={6} max={94} value={beforeAfter}
-                onChange={e=>setBeforeAfter(parseInt(e.target.value))}
-                className="absolute inset-0 opacity-0 cursor-ew-resize"
-                aria-label="Before after slider"
-              />
-            </div>
+           <div className="mt-10 relative rounded-[16px] overflow-hidden border border-white/[0.10] shadow-[0_30px_90px_rgba(0,0,0,0.48)]">
+             <div className="relative h-[380px] sm:h-[520px] w-full">
+               <img src={gardenImages.bath2} alt="After: Knysna lagoon cottage full copper re-pipe and designer bath renovation by Punctual Plumbers" className="absolute inset-0 h-full w-full object-cover" />
+               <div className="absolute inset-0" style={{ clipPath:`inset(0 ${100-beforeAfter}% 0 0)` }}>
+                 <img src={gardenImages.bath3} alt="Before: 1998 tile and galvanized pipes in Knysna lagoon cottage before renovation by Punctual Plumbers" className="h-full w-full object-cover saturate-[.65] brightness-[.82]" />
+                 <div className="absolute inset-0 bg-[#06243a]/28" />
+               </div>
+               <div className="absolute top-0 bottom-0" style={{ left:`${beforeAfter}%` }}>
+                 <div className="absolute top-0 bottom-0 w-[2.5px] -translate-x-1/2" style={{ background: colors.aqua, boxShadow:`0 0 28px ${colors.aqua}` }} />
+                 <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-[48px] h-[48px] rounded-full flex items-center justify-center"
+                      style={{ background: `linear-gradient(135deg, ${colors.aqua}, #73f3ff)`, boxShadow:"0 8px 30px rgba(0,210,255,.45)" }}>
+                   <span className="text-[#062636] text-[15px] font-[900]">⇆</span>
+                 </div>
+               </div>
+               <input
+                 type="range" min={6} max={94} value={beforeAfter}
+                 onChange={e=>setBeforeAfter(parseInt(e.target.value))}
+                 className="absolute inset-0 opacity-0 cursor-ew-resize"
+                 aria-label="Before after slider"
+               />
+             </div>
+             <div className="flex items-center justify-between px-5 py-3 text-[11.5px] font-[700]">
+               <span className="text-white/70">BEFORE - 1998 tile / galvanized</span>
+               <span className="text-[#04212d] bg-[#00d2ff] px-3 py-1 rounded-full">AFTER - Coastal copper / travertine</span>
+             </div>
             <div className="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/[0.075] text-center text-[12.7px] bg-[#0d1828]">
               {[
                 ["11 days", "full strip to handover"],
@@ -323,7 +320,7 @@ function AppContent() {
     } else if (isTerms) {
       document.title = "Terms of Service | Punctual Plumbers";
     } else {
-      document.title = "Punctual Plumbers — Being Punctual is our business. Your Paradise Protected.";
+      document.title = "Punctual Plumbers - Being Punctual is our business. Your Paradise Protected.";
     }
   }
 
@@ -344,14 +341,15 @@ function AppContent() {
   return (
     <div
       style={{
-        fontFamily: "'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif",
-        backgroundColor: colors.charcoal,
+        fontFamily: "'Outfit', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif",
+        backgroundColor: colors.bg,
         color: "#f6f6f6",
       }}
       className="min-h-screen antialiased overflow-x-clip"
     >
       <style>{`
-        h1,h2,h3,.display { font-family: 'Outfit', 'Inter', sans-serif; letter-spacing:-0.018em; }
+        body { font-family: 'Outfit', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+        h1,h2,h3,.display { font-family: 'Outfit', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; letter-spacing:-0.018em; }
         ::selection { background:#00d2ff33; color:#fff; }
         * { scrollbar-width: thin; scrollbar-color: #00D2FF33 #0b1b2b;}
         @keyframes pingSlow { 75%,100% { transform: scale(2.6); opacity:0;} }
@@ -365,6 +363,13 @@ function AppContent() {
         .water-grid { background-image: linear-gradient(rgba(0,210,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(0,210,255,0.05) 1px, transparent 1px); background-size: 42px 42px; }
         .no-scrollbar::-webkit-scrollbar { display:none }
         input[type=range] { accent-color: #00D2FF; }
+        @media (prefers-reduced-motion: reduce) {
+          *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+          }
+        }
       `}</style>
 
       {/* NAV */}
@@ -374,13 +379,10 @@ function AppContent() {
         transition={{ duration:0.7, ease:[0.22,1,0.36,1] }}
         className="fixed top-0 z-[60] w-full"
       >
-        <div className="mx-auto max-w-[1250px] px-4 sm:px-7 pt-4">
-          <div className="glass rounded-2xl px-4 sm:px-6 py-[13px] flex items-center justify-between shadow-[0_12px_60px_rgba(0,0,0,0.38)]">
+        <div className="mx-auto max-w-[1250px] px-4 sm:px-7 pt-2">
+          <div className="glass rounded-2xl px-4 sm:px-6 py-[10px] flex items-center justify-between shadow-[0_12px_60px_rgba(0,0,0,0.38)]">
             <div className="flex items-center gap-3">
-              <img src="/plumbers-logo.png" alt="Punctual Plumbers" className="h-[56px] w-auto" />
-              <div className="hidden lg:block ml-5 pl-5 border-l border-white/10 text-[11px] text-white/56 leading-snug">
-                Mossel Bay → Storms River<br/>Since 2009 • PIRB 3419
-              </div>
+              <img src="/plumbers-logo.png" alt="Punctual Plumbers" className="h-[40px] w-auto" />
             </div>
             <div className="hidden xl:flex items-center gap-8 text-[13.5px] text-white/80 font-[500]">
               {["Services","Process","Coverage","Reviews","Blog"].map(l=>(
@@ -418,7 +420,7 @@ function AppContent() {
       {pageContent}
 
       {/* Footer */}
-      <footer className="py-14 border-t border-white/[0.078]" style={{ background:"#0F1729" }}>
+      <footer className="py-14 border-t border-white/[0.078]" style={{ background:"#0B1120" }}>
         <div className="mx-auto max-w-[1250px] px-5 sm:px-7 grid md:grid-cols-4 gap-10 text-[13.6px] text-white/68">
           <div>
             <div className="flex items-center gap-2">
@@ -473,7 +475,7 @@ function AppContent() {
       </footer>
 
       {/* FAQ Section for SEO/AEO */}
-      <section className="py-20 sm:py-28" style={{ background: colors.charcoal2 }}>
+      <section className="py-20 sm:py-28" style={{ background: colors.bgAlt }}>
         <div className="mx-auto max-w-[900px] px-5 sm:px-7">
           <div className="text-center max-w-[720px] mx-auto">
             <h2 className="text-[34px] sm:text-[48px] font-[800] mt-3 text-white">Frequently asked questions.</h2>
@@ -515,7 +517,7 @@ function AppContent() {
                 a: "Our 7-year workmanship guarantee is the longest on the Garden Route. It covers defects in our workmanship only, not damage from misuse, negligence, or external factors. Manufacturer warranties apply to all materials we supply."
               },
             ].map((item, i) => (
-              <div key={i} className="rounded-[20px] p-6 sm:p-8" style={{ background: "linear-gradient(170deg, rgba(23,48,76,0.9), rgba(8,24,44,0.9))", border: "1px solid rgba(255,255,255,0.08)" }}>
+              <div key={i} className="rounded-[16px] p-6 sm:p-8" style={{ background: "linear-gradient(170deg, rgba(23,48,76,0.9), rgba(8,24,44,0.9))", border: "1px solid rgba(255,255,255,0.08)" }}>
                 <h3 className="text-[18px] sm:text-[20px] font-[700] text-white">{item.q}</h3>
                 <p className="mt-3 text-[14.5px] leading-relaxed text-white/75">{item.a}</p>
               </div>
@@ -524,11 +526,7 @@ function AppContent() {
 
           <div className="mt-12 text-center">
             <p className="text-white/60">Still have questions?</p>
-            <a href="https://wa.me/27832379132?text=Hi%20Punctual%20Plumbers%20-%20I%20have%20a%20question%20about%20" target="_blank" rel="noreferrer"
-              className="mt-4 inline-flex items-center gap-2 px-[26px] py-[15px] rounded-[16px] text-[14.5px] font-[650] text-white transition-all"
-              style={{ background: "linear-gradient(135deg, #25D366, #128C7E)", border: "1px solid rgba(255,255,255,0.1)" }}>
-              Ask us on WhatsApp
-            </a>
+            <p className="mt-2 text-white/40 text-[13px]">Call 083 237 9132 or use the WhatsApp button below.</p>
           </div>
         </div>
       </section>
@@ -589,7 +587,7 @@ function AppContent() {
           rel="noopener noreferrer"
           className="h-[52px] w-[52px] rounded-full flex items-center justify-center shadow-[0_18px_50px_rgba(0,0,0,0.43)] transition-all duration-300"
           style={{
-            background:"linear-gradient(135deg, #25D366, #128C7E)",
+            background:"linear-gradient(135deg, #1da851, #0d8a5c)",
             border:"1px solid rgba(255,255,255,0.15)",
           }}
         >
