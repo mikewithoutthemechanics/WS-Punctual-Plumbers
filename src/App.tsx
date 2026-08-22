@@ -18,9 +18,11 @@ const colors = {
   aqua: "#00D2FF",
   aquaSoft: "#55e6fb",
   sand: "#F5F0E8",
-  bg: "#0B1120",
-  bgAlt: "#0B1120",
-  surface: "#0d1828",
+  bg: "var(--bg)",
+  bgAlt: "var(--bg-alt)",
+  bgSection: "var(--bg-section)",
+  bgDeep: "var(--bg-deep)",
+  surface: "var(--surface)",
   slate: "#23364b",
   green: "#1e8449",
   copper: "#b87333",
@@ -164,7 +166,7 @@ function HomePage() {
       <section className="relative z-20 mt-32 pb-6">
         <div className="mx-auto max-w-[1250px] px-5 sm:px-7">
           <div className="rounded-[16px] px-4 sm:px-7 py-[16px] flex flex-wrap items-center justify-center sm:justify-between gap-4 text-[12.3px] sm:text-[13px]"
-            style={{ background:"#0B1120", border:"1px solid rgba(255,255,255,0.073)", boxShadow:"0 20px 60px rgba(0,0,0,0.42)" }}>
+            style={{ background:"var(--bg-deep)", border:"1px solid rgba(255,255,255,0.073)", boxShadow:"0 20px 60px rgba(0,0,0,0.42)" }}>
             {[
               <span key="rating" className="flex items-center gap-1"><Icons.Star className="text-aqua w-4 h-4" /> 4.9/5 Google Rating</span>,
               <span key="award" className="flex items-center gap-1"><Icons.Award className="text-aqua w-4 h-4" /> Garden Route's #1 Rated Plumber</span>,
@@ -198,7 +200,8 @@ function HomePage() {
       </section>
 
       {/* Scene 2 – Services */}
-      <section className="relative py-14 sm:py-20" style={{ background:`linear-gradient(180deg, ${colors.bg} 0%, ${colors.bgAlt} 100%)` }}>
+      <section className="relative py-14 sm:py-20 overflow-hidden" style={{ background:`linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 50%, var(--bg-deep) 100%)` }}>
+        <div className="noise-overlay" />
         <div className="mx-auto max-w-[1250px] px-5 sm:px-7">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-6">
             <div>
@@ -242,7 +245,8 @@ function HomePage() {
       <KnowledgeCarousel />
 
       {/* Before / After */}
-      <section className="py-20 sm:py-24" style={{ background: colors.bg }}>
+      <section className="relative py-20 sm:py-24 overflow-hidden" style={{ background: `linear-gradient(180deg, var(--bg-alt) 0%, var(--bg-section) 50%, var(--bg-deep) 100%)` }}>
+        <div className="noise-overlay" />
         <div className="mx-auto max-w-[1100px] px-5 sm:px-7">
           <div className="text-center max-w-[750px] mx-auto">
             <h3 className="display text-[32px] sm:text-[44px] font-[800] mt-3">Drag the water line.</h3>
@@ -374,6 +378,7 @@ function AppContent() {
         .glass { backdrop-filter: blur(18px) saturate(160%); -webkit-backdrop-filter: blur(18px) saturate(160%); background: rgba(14,27,46,0.58); border:1px solid rgba(255,255,255,0.09); }
         .glass-light { backdrop-filter: blur(16px) saturate(150%); -webkit-backdrop-filter: blur(16px) saturate(150%); background: rgba(245,240,232,0.82); border:1px solid rgba(10,61,98,0.07); }
         .water-grid { background-image: linear-gradient(rgba(0,210,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(0,210,255,0.05) 1px, transparent 1px); background-size: 42px 42px; }
+        .noise-overlay { position:absolute; inset:0; pointer-events:none; opacity:0.035; mix-blend-mode:overlay; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-repeat:repeat; background-size:180px 180px; }
         .no-scrollbar::-webkit-scrollbar { display:none }
         input[type=range] { accent-color: #00D2FF; }
         @media (prefers-reduced-motion: reduce) {
@@ -436,7 +441,7 @@ function AppContent() {
       {pageContent}
 
       {/* Footer */}
-      <footer className="py-14 border-t border-white/[0.078]" style={{ background:"#0B1120" }}>
+      <footer className="py-14 border-t border-white/[0.078]" style={{ background:"var(--bg-deep)" }}>
         <div className="mx-auto max-w-[1250px] px-5 sm:px-7 grid md:grid-cols-4 gap-10 text-[13.6px] text-white/68">
           <div>
             <div className="flex items-center gap-2">
@@ -491,7 +496,8 @@ function AppContent() {
       </footer>
 
       {/* FAQ Section for SEO/AEO */}
-      <section className="py-20 sm:py-28" style={{ background: colors.bgAlt }}>
+      <section className="relative py-20 sm:py-28 overflow-hidden" style={{ background: `linear-gradient(180deg, var(--bg-deep) 0%, var(--bg) 100%)` }}>
+        <div className="noise-overlay" />
         <div className="mx-auto max-w-[900px] px-5 sm:px-7">
           <div className="text-center max-w-[720px] mx-auto">
             <h2 className="text-[34px] sm:text-[48px] font-[800] mt-3 text-white">Frequently asked questions.</h2>

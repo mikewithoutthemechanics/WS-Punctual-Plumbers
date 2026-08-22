@@ -9,8 +9,11 @@
 @layer base {
   :root {
     --bg: #0B1120;
-    --bg-alt: #0B1120;
+    --bg-alt: #0d1525;
+    --bg-section: #101b2e;
+    --bg-deep: #0a0f1a;
     --surface: #0d1828;
+    --surface-elevated: #111e35;
     --text-primary: #f6f6f6;
     --text-secondary: rgba(255, 255, 255, 0.68);
     --accent: #00D2FF;
@@ -21,7 +24,10 @@
   [data-theme="light"] {
     --bg: #f6f6f6;
     --bg-alt: #ffffff;
+    --bg-section: #ffffff;
+    --bg-deep: #eef2f7;
     --surface: #ffffff;
+    --surface-elevated: #ffffff;
     --text-primary: #0B1120;
     --text-secondary: rgba(11, 17, 32, 0.68);
     --accent: #00A3CC;

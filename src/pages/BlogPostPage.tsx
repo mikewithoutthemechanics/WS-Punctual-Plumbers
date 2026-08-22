@@ -191,7 +191,7 @@ export function BlogPostPage({ slug }: BlogPostPageProps) {
 
   if (!post) {
     return (
-      <div className="min-h-screen flex items-center justify-center" style={{ background: "#0B1120" }}>
+      <div className="min-h-screen flex items-center justify-center" style={{ background: "var(--bg-deep)" }}>
         <div className="text-center">
           <h1 className="text-[48px] font-[800] text-white">404</h1>
           <p className="mt-4 text-white/60">Post not found.</p>
@@ -205,9 +205,10 @@ export function BlogPostPage({ slug }: BlogPostPageProps) {
   }
 
   return (
-    <div className="min-h-screen" style={{ background: "#0B1120", color: "#f6f6f6" }}>
+    <div className="relative min-h-screen" style={{ background: "var(--bg)", color: "#f6f6f6" }}>
       <section className="relative py-16 sm:py-24 overflow-hidden">
-        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, #0B1120 0%, #0B1120 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%)" }} />
+        <div className="noise-overlay" />
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: "linear-gradient(rgba(0,210,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,210,255,0.03) 1px, transparent 1px)",
           backgroundSize: "50px 50px",

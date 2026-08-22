@@ -20,7 +20,8 @@ export function CoverageMap() {
   const [mapActive, setMapActive] = useState(serviceTowns[0]);
 
   return (
-    <section id="coverage" className="py-20 sm:py-28" style={{ background: "#0B1120" }}>
+    <section id="coverage" className="relative py-20 sm:py-28 overflow-hidden" style={{ background: "linear-gradient(180deg, var(--bg-section) 0%, var(--bg) 100%)" }}>
+      <div className="noise-overlay" />
       <div className="mx-auto max-w-[1250px] px-5 sm:px-7">
         <div className="max-w-[780px]">
           <h3 className="text-[32px] sm:text-[44px] font-[800] mt-3 text-white">
@@ -30,7 +31,7 @@ export function CoverageMap() {
 
         <div className="mt-10 grid lg:grid-cols-1 gap-6">
           <div className="relative rounded-[26px] overflow-hidden border border-white/[0.096]"
-            style={{ background: "#0B1120" }}>
+            style={{ background: "var(--bg-deep)" }}>
             <div className="relative h-[420px] sm:h-[500px] overflow-hidden">
               <img src={gardenImages.valley} alt="Garden Route coastal landscape from Mossel Bay to Storms River serviced by Punctual Plumbers" className="absolute inset-0 w-full h-full object-cover opacity-[0.18]" />
               <div className="absolute inset-0"

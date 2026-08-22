@@ -21,12 +21,13 @@ export function KnowledgeCarousel() {
   const current = carouselFacts[idx];
 
   return (
-    <section className="relative py-20 sm:py-28 overflow-hidden" style={{ background: "linear-gradient(180deg, #0B1120 0%, #0B1120 100%)" }}>
+    <section className="relative py-20 sm:py-28 overflow-hidden" style={{ background: "linear-gradient(180deg, var(--bg) 0%, var(--bg-section) 100%)" }}>
       <div className="absolute inset-0 opacity-[0.04]" style={{
         backgroundImage: "linear-gradient(rgba(0,210,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,210,255,0.03) 1px, transparent 1px)",
         backgroundSize: "50px 50px",
         pointerEvents: "none"
       }} />
+      <div className="noise-overlay" />
       <div className="mx-auto max-w-[1250px] px-5 sm:px-7">
         <div className="max-w-[720px] text-center">
           <h2 className="text-[34px] sm:text-[48px] font-[800] mt-3 text-white">Water wisdom from the Route.</h2>
