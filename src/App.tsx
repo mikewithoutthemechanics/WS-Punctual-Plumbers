@@ -437,61 +437,6 @@ function AppContent() {
 
       {pageContent}
 
-      {/* Footer */}
-      <footer className="py-14 border-t border-white/[0.078]" style={{ background:"var(--bg-deep)" }}>
-        <div className="mx-auto max-w-[1250px] px-5 sm:px-7 grid md:grid-cols-4 gap-10 text-[13.6px] text-white/68">
-          <div>
-            <div className="flex items-center gap-2">
-              <img src="/plumbers-logo.png" alt="Punctual Plumbers" className="h-[32px] w-auto" />
-              <div>
-                <div className="display font-[800] text-white text-[14px] -mt-[2px]">Punctual Plumbers</div>
-                <div className="text-[11px] text-[#8feaff] tracking-wider -mt-[2px]">PARADISE PROTECTED</div>
-              </div>
-            </div>
-            <p className="mt-3 text-white/55 leading-relaxed">
-              Coastal-certified copper plumbers. PIRB 3419. Mossel Bay → Storms River since 2009. 24/7 emergency.
-            </p>
-            <p className="mt-2 text-[11px] text-white/40">
-              Website created and managed by <span className="text-aqua">Agentcy.co.za</span><br/>
-              AI integrations by <span className="text-aqua">Integr8 AI</span>
-            </p>
-          </div>
-          <div>
-            <div className="text-white font-[700] mb-2">Services</div>
-            <ul className="space-y-[7px] text-white/60">
-              <li>General Plumbing</li>
-              <li>Bathroom Renovations</li>
-              <li>Leak Detection</li>
-              <li>Water Filtration</li>
-              <li>Emergency Callouts</li>
-            </ul>
-          </div>
-          <div>
-            <div className="text-white font-[700] mb-2">Contact</div>
-            <ul className="space-y-[7px] text-white/60">
-              <li>Garden Route – 083 237 9132</li>
-              <li>Emergency 24/7 – same number</li>
-              <li>punctualplumbers@outlook.com</li>
-            </ul>
-          </div>
-          <div>
-            <div className="text-white font-[700] mb-2">Legal</div>
-            <ul className="space-y-[7px]">
-              <li><a href="#/privacy-policy" className="text-aqua hover:underline">Privacy Policy</a></li>
-              <li><a href="#/terms-of-service" className="text-aqua hover:underline">Terms of Service</a></li>
-            </ul>
-            <div className="mt-4 text-white/60 leading-relaxed">
-              PIRB 3419<br/>
-              IOPSA • SANS 10252
-            </div>
-          </div>
-        </div>
-        <div className="mx-auto max-w-[1250px] px-5 sm:px-7 mt-10 pt-6 border-t border-white/[0.075] text-[11.6px] text-white/42 flex flex-col sm:flex-row justify-between gap-3">
-          <div>© 2009–2026 Punctual Plumbers (Pty) Ltd. All rights reserved.</div>
-          <div>Designed & developed by Agentcy.co.za | AI by Integr8 AI</div>
-        </div>
-      </footer>
-
       {/* FAQ Section for SEO/AEO */}
       <section className="relative py-20 sm:py-28 overflow-hidden" style={{ background: `linear-gradient(180deg, var(--bg-deep) 0%, var(--bg) 100%)` }}>
         <div className="mx-auto max-w-[900px] px-5 sm:px-7">
@@ -596,6 +541,61 @@ function AppContent() {
           }
         ]
       }) }} />
+
+      {/* Footer */}
+      <footer className="py-14 border-t border-white/[0.078]" style={{ background:"var(--bg-deep)" }}>
+        <div className="mx-auto max-w-[1250px] px-5 sm:px-7 grid md:grid-cols-4 gap-10 text-[13.6px] text-white/68">
+          <div>
+            <div className="flex items-center gap-2">
+              <img src="/plumbers-logo.png" alt="Punctual Plumbers" className="h-[32px] w-auto" />
+              <div>
+                <div className="display font-[800] text-white text-[14px] -mt-[2px]">Punctual Plumbers</div>
+                <div className="text-[11px] text-[#8feaff] tracking-wider -mt-[2px]">PARADISE PROTECTED</div>
+              </div>
+            </div>
+            <p className="mt-3 text-white/55 leading-relaxed">
+              Coastal-certified copper plumbers. PIRB 3419. Mossel Bay → Storms River since 2009. 24/7 emergency.
+            </p>
+            <p className="mt-2 text-[11px] text-white/40">
+              Website created and managed by <span className="text-aqua">Agentcy.co.za</span><br/>
+              AI integrations by <span className="text-aqua">Integr8 AI</span>
+            </p>
+          </div>
+          <div>
+            <div className="text-white font-[700] mb-2">Services</div>
+            <ul className="space-y-[7px] text-white/60">
+              <li>General Plumbing</li>
+              <li>Bathroom Renovations</li>
+              <li>Leak Detection</li>
+              <li>Water Filtration</li>
+              <li>Emergency Callouts</li>
+            </ul>
+          </div>
+          <div>
+            <div className="text-white font-[700] mb-2">Contact</div>
+            <ul className="space-y-[7px] text-white/60">
+              <li>Garden Route – 083 237 9132</li>
+              <li>Emergency 24/7 – same number</li>
+              <li>punctualplumbers@outlook.com</li>
+            </ul>
+          </div>
+          <div>
+            <div className="text-white font-[700] mb-2">Legal</div>
+            <ul className="space-y-[7px]">
+              <li><a href="#/privacy-policy" className="text-aqua hover:underline">Privacy Policy</a></li>
+              <li><a href="#/terms-of-service" className="text-aqua hover:underline">Terms of Service</a></li>
+            </ul>
+            <div className="mt-4 text-white/60 leading-relaxed">
+              PIRB 3419<br/>
+              IOPSA • SANS 10252
+            </div>
+          </div>
+        </div>
+        <div className="mx-auto max-w-[1250px] px-5 sm:px-7 mt-10 pt-6 border-t border-white/[0.075] text-[11.6px] text-white/42 flex flex-col sm:flex-row justify-between gap-3">
+          <div>© 2009–2026 Punctual Plumbers (Pty) Ltd. All rights reserved.</div>
+          <div>Designed & developed by Agentcy.co.za | AI by Integr8 AI</div>
+        </div>
+      </footer>
 
       {/* WhatsApp floating button */}
       <div className="fixed bottom-4 left-3 sm:left-5 z-[70]">
